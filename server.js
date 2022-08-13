@@ -6,7 +6,7 @@ const db=require("./database")
 require('dotenv').config()
 const app=express()
 app.use(express.json())
-const port=6000
+const port=process.env.PORT || 6000
 db.connect()
 
 const ProductRouter=require("./products/products.routes")

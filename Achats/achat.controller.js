@@ -6,7 +6,7 @@ function createAchat(achatInfo) {
 }
 
 function AccessAll() {
-  return Achat.find().populate("client").populate("product");
+  return Achat.find().populate("client").populate("products.product");
 }
 
 module.exports = { createAchat, AccessAll };

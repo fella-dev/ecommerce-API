@@ -14,9 +14,11 @@ db.connect();
 const ProductRouter = require("./products/products.routes");
 const AchatRouter = require("./Achats/achat.routes");
 const UserRouter = require("./user/user.routes");
+const MessageRouter = require("./Messaages/messages.routes");
 app.use("/products", ProductRouter);
 app.use("/achats", AchatRouter);
 app.use("/users", UserRouter);
+app.use("/messages", MessageRouter);
 app.all("*", (req, res) => {
   res.status(404);
   res.send({ message: "Path not found" });

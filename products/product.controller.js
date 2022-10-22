@@ -8,7 +8,7 @@ function createProduct(prdInfo) {
 function getAllProducts({ limit, sort }) {
   const query = ProductModel.find();
   if (sort) {
-    query.sort({ [sort]: 1 });
+    query.sort({ [sort]: -1 });
   }
   if (limit) {
     query.limit(limit);
